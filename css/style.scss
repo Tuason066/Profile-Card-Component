@@ -1,0 +1,186 @@
+// VARIABLE
+
+// Margin
+
+$Margin-Centered: 0 auto;
+
+// Background Color
+$Background--Cyan--clr: hsl(185, 75%, 39%);
+$Background--White--clr: #fff;
+
+// Heading Color
+$Header--Desaturated-Blue--clr: hsl(229, 23%, 23%);
+
+// Text Color
+$Text--Dark-Grey--clr: hsl(0, 0%, 59%);
+$Text--Grayish-Blue--clr: hsl(227, 10%, 46%);
+
+
+// RESET
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+img {
+    max-width: 100%;
+}
+
+// BASE STYLE
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+h4 {
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+h3,
+h4 {
+    color: $Header--Desaturated-Blue--clr;
+}
+
+// MOBILE STYLE
+
+.grey--text {
+    color: $Text--Dark-Grey--clr;
+    font-weight: 400;
+}
+
+.component {
+    position: relative;
+    padding: 5em 0;
+    max-width: 1440px;
+    margin: $Margin-Centered;
+    background-color: $Background--Cyan--clr;
+    overflow: hidden;
+
+    z-index: -1;
+}
+
+.bubble--top {
+    position: absolute;
+    top: -25%;
+    left: -50%;
+
+    z-index: -2;
+}
+.bubble--bottom {
+    position: absolute;
+    bottom: -25%;
+    right: -50%;
+
+    z-index: -2;
+}
+
+.card {
+    max-width: 350px;
+    width: 90%;
+    margin: $Margin-Centered;
+    background-color: $Background--White--clr;
+    border-radius: 20px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0px 10px 1rem rgba(0, 0, 0, 0.2);
+
+}
+
+.user {
+    border-bottom: 1px solid $Text--Dark-Grey--clr;
+    padding-bottom: .7em;
+
+    &__profile {
+        border-radius: 50%;
+        border: 5px solid $Background--White--clr;
+        transform: translateY(-50%);
+    }
+    &__name {
+        transform: translateY(-130%);
+    }
+    &__city {
+        transform: translateY(-100%);
+    }
+
+}
+
+.stats {
+    width: 75%;
+    margin: $Margin-Centered;
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5em 0;
+
+    &__header {
+        line-height: 1.5;
+    }
+    &__text {
+        line-height: 1.5;
+        font-size: .9rem;
+        letter-spacing: 1px;
+    }
+}
+
+.footer {
+    padding: 2em 0;
+    background-color: $Background--Cyan--clr;
+    max-width: 1440px;
+    margin: $Margin-Centered;
+    text-align: center;
+    color: $Background--White--clr;
+
+    &__text {
+        width: 90%;
+        margin: $Margin-Centered;
+    }
+    &__link {
+        color: $Header--Desaturated-Blue--clr;
+    }
+}
+
+@media (min-width: 700px) {
+
+    .bubble--top {
+        top: -75%;
+        left: -60%;
+    }
+    .bubble--bottom {
+        bottom: -75%;
+        right: -60%;
+    }
+
+}
+@media (min-width: 900px) {
+
+    .bubble--top {
+        top: -120%;
+        left: -40%;
+    }
+    .bubble--bottom {
+        bottom: -120%;
+        right: -40%;
+    }
+
+}
+@media (min-width: 1440px) {
+
+    .bubble--top {
+        top: -120%;
+        left: -15%;
+    }
+    .bubble--bottom {
+        bottom: -120%;
+        right: -15%;
+    }
+
+}
